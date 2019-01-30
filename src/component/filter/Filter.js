@@ -11,6 +11,7 @@ class Filter extends Component
             rating: 0,
             value_saisie : '',
           };
+          this.ref = React.createRef()
     }
     change_search = (event) => 
     {
@@ -21,6 +22,10 @@ class Filter extends Component
     {    
     this.setState({rating: nextValue})
     this.props.starclick(nextValue)
+    }
+    componentDidMount()
+    {
+        this.ref.current.focus()
     }
     
     render()
@@ -39,6 +44,7 @@ class Filter extends Component
                             value = {this.state.value_saisie}
                             onChange={this.change_search}
                             onClick={this.change_search}
+                            ref={this.ref}
                              />
                         </div>
                 <div className="col-xl-6">

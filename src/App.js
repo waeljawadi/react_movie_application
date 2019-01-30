@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import Filter from './component/filter/Filter'
 import List from './component/list/List'
 import Allfilms from './Allfilms'
-
 import './App.css';
-
 class App extends Component {
     constructor(props) {
       super(props)
@@ -12,7 +10,6 @@ class App extends Component {
         search: '',
         rate: 0,
         allfilms : Allfilms
-
       }
     }
     from_filter_keyword = (keyword, rate) => {
@@ -38,23 +35,7 @@ class App extends Component {
       ({image:'dfgd',title: title,rate:stars}
       )
     })
-
-    console.log(this.state.allfilms)
-
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
   render() {
     return (
       <div className="App">
