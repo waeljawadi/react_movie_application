@@ -45,16 +45,6 @@ class App extends Component {
 
 
 
-    componentDidUpdate(prevProps, prevState) {
-      
-
-
-      
-    }
-
-
-
-
 
 
 
