@@ -1,0 +1,14 @@
+.starrate {
+  font-size: 2em;
+}
+
+.starrate .min_rate {
+  font-size: 0.6em;
+  margin-bottom: 0px;
+}
+
+.starrate .search {
+  position: relative;
+  top: 18px;
+}
+/*# sourceMappingURL=style.module.css.map */
