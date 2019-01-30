@@ -27,16 +27,13 @@ class Additem extends Component
              <div className="col-md-3">
                  <div className="card" >
                     <img className="card-img-top" src={add_item} alt="Card image cap" />
-                    <div class={`card-body ${css.nopadds}`}>
+                    <div className={`card-body ${css.nopadds}`}>
                     <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal" >Add a new film</button>
 
                     </div>
                 </div>
                 </div>
-
-
-
-<div className="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div className="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-header">
@@ -48,9 +45,10 @@ class Additem extends Component
       <div className="modal-body">
         <form>
           <div className="form-group">
-            <label for="recipient-name" className="col-form-label">Film name:</label>
+            <label htmlFor="recipient-name" className="col-form-label">Film name:</label>
             <input 
             type="text"
+            value={this.state.film_name}
              className="form-control"
              id="recipient-name"
              onChange={this.updatevalue}
@@ -63,43 +61,23 @@ class Additem extends Component
                             value={this.state.rating}
                             onStarClick={this.onStarClick}     
                             />
-         
         </form>
       </div>
       <div className="modal-footer">
         <button 
         type="button" 
         className="btn btn-secondary" 
-        data-dismiss="modal"
-        
-        
-        
-        
+        data-dismiss="modal"  
         >Close</button>
-        <button type="button" className="btn btn-primary"
-        onClick = {() => this.props.receive_new(this.state.rating,this.state.film_name,this.state.clicked)}
-        >Send message</button>
+        <button 
+          type="button" 
+          className="btn btn-primary"
+          onClick={() => this.props.newfilm(this.state.rating,this.state.film_name)}>Send message</button>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                
+              
              </React.Fragment>
          )   
         }
