@@ -21,4 +21,9 @@
 .nopadds {
   padding: 13px;
 }
+
+.cardy img {
+  max-height: 250px;
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.module.css.map */

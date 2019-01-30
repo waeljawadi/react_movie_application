@@ -17,13 +17,13 @@ class List extends Component
         if (this.props.rate > 0) 
             {
                 resultat =  this.props.allfilms
-                .filter((item,index) => ((item.title.indexOf(this.props.keyword) > -1) && (item.rate == this.props.rate)))
+                .filter((item,index) => ((item.title.toUpperCase().trim().indexOf(this.props.keyword.toUpperCase().trim()) > -1) && (item.rate >= this.props.rate)))
                 .map((item,index) => <Item key={index} item={item} />)
             }
         else if (this.props.rate == 0)
             {
                 resultat = this.props.allfilms
-                .filter((item,index) => ((item.title.indexOf(this.props.keyword) > -1) ))
+                .filter((item,index) => ((item.title.toUpperCase().trim().indexOf(this.props.keyword.toUpperCase().trim()) > -1) ))
                 .map((item,index) => <Item key={index} item={item} />)
             }
         
