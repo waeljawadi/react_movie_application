@@ -2,6 +2,7 @@ import React from 'react'
 import {Component} from 'react'
 import Item from './Item'
 import Additem from './Additem'
+import hoc from '../Hoc'
 
 class List extends Component
 {
@@ -41,4 +42,4 @@ class List extends Component
         )
     }
 }
-export default List
+export default hoc(List)

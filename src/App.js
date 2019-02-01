@@ -9,7 +9,8 @@ class App extends Component {
       this.state = {
         search: '',
         rate: 0,
-        allfilms : Allfilms
+        allfilms : Allfilms,
+        time : 0
       }
     }
     from_filter_keyword = (keyword, rate) => {
@@ -36,6 +37,11 @@ class App extends Component {
       )
     })
     }
+// time = () =>
+// setTimeout(() => {
+//   this.setState((prevState) => ({time :prevState.time +1}))
+// }, 1);
+
   render() {
     return (
       <div className="App">
@@ -48,6 +54,7 @@ class App extends Component {
             film_name={this.state.film_name}
             newfilm ={this.newfilm} 
             allfilms={this.state.allfilms}
+       //     time = {this.time}
              />
       </div>
     );
