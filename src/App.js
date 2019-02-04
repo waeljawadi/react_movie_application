@@ -37,10 +37,10 @@ class App extends Component {
       )
     })
     }
-// time = () =>
-// setTimeout(() => {
-//   this.setState((prevState) => ({time :prevState.time +1}))
-// }, 1);
+time = () =>
+setTimeout(() => {
+  this.setState((prevState) => ({time :prevState.time +1}))
+}, 1);
 
   render() {
     return (
@@ -54,7 +54,7 @@ class App extends Component {
             film_name={this.state.film_name}
             newfilm ={this.newfilm} 
             allfilms={this.state.allfilms}
-       //     time = {this.time}
+            time = {this.time}
              />
       </div>
     );

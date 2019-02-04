@@ -13,17 +13,18 @@ const hoc = WrappedComponent =>
         render()
         {
            
-        //    let x = {...this.props}
-          
-        //    console.log(x)
-        //     let resultat
-        //     (this.props.time() > 3000) ? resultat = <WrappedComponent {...this.props} />  : resultat = <img src="https://i.gifer.com/1amw.gif" />
-        //     
+       
+            let resultat
+            (this.props.time() > 50) ?
+             resultat = <WrappedComponent {...this.props} />  :
+             resultat = <img src="https://thumbs.gfycat.com/WelldocumentedRevolvingBass-small.gif" />
+            
         return(
                 <React.Fragment>
-                    {/* {resultat} */}
+                    
 
-                    <WrappedComponent {...this.props} /> 
+                   
+                    {resultat}
                 </React.Fragment>
 
             )
