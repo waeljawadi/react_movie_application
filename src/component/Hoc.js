@@ -17,7 +17,7 @@ const hoc = WrappedComponent =>
             let resultat
             (this.props.time() > 50) ?
              resultat = <WrappedComponent {...this.props} />  :
-             resultat = <img src="https://thumbs.gfycat.com/WelldocumentedRevolvingBass-small.gif" />
+             resultat = <img src="https://cdn.dribbble.com/users/52627/screenshots/2200411/___-2.gif" />
             
         return(
                 <React.Fragment>
